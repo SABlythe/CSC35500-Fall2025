@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
       return 1;
     }
 
-  int myKeyVal = atoi(argv[1]);
+  int myKeyVal = stoi(argv[1]);
 
   int shm_id = shmget(myKeyVal, 1024 /*1 KB*/, 0);
 
