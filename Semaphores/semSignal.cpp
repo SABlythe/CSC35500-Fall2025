@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
   struct sembuf waitCommand[NUM_COMMANDS];
 
   waitCommand[0].sem_num = 0; // which semaphore in the array do we want?
-  waitCommand[0].sem_op = +1; // decrement semaphore (by 1) and maybe wait   
+  waitCommand[0].sem_op = +1; // increment semaphore (by 1) and maybe wait   
   waitCommand[0].sem_flg = 0; // default flags ... 
   
   int semResult = semop(sem_id, waitCommand, NUM_COMMANDS );
