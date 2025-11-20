@@ -3,7 +3,7 @@
 	extern		printNL, printDigit
 
 _start:
-	mov	al, 8
+	mov	al, 2
 	call	printDigit
 
 	call 	printNL

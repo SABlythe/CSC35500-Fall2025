@@ -1,5 +1,5 @@
 	section .data
-__nls:	db	0xA
+_newline:db	0xA
 
 	section .text
 	global	printNL
@@ -11,7 +11,7 @@ printNL:
 
 	mov	rax, 4		; write a string
 	mov	rbx, 1		; write to stdout
-	mov	rcx, __nls 
+	mov	rcx, _newline 
 	mov	rdx, 1
 	int 	0x80
 
